@@ -2,11 +2,70 @@
 <html lang="en">
 <head>
     <script src="Mi_primer_JV.js"></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora con JV</title>
+    <h1>Primer Calculadora con JV</h1>
+    <h3>Diviértete respondiendo</h3>
 </head>
 <body>
-    <h1>Hola</h1>
+    <form  class="form" action="5" cellpadding="10">
+    <p></p>
+    <h3>Registro de Datos</h3>
+    <p>Ingresa Nombres:
+        <input class="espa1"type="text" id="nombres">
+    </p>
+    <p>Ingresa Apellidos:
+        <input class="espa1" type="text" id="apellidos">
+    </p>
+    <p>¿Deseas ingresar un mensaje? Escribelo aquí:
+        <textarea class="espa2" type="text" id="mensaje"></textarea>
+    </p>
+    <p>Digita tu primer nota:
+        <input class="espa1" type="number" id="nota1">
+    </p>
+    <p>Digita tu segunda nota:
+        <input class="espa1" type="number" id="nota2">
+    </p>
+    <p>Digita tu tercer nota:
+        <input class="espa1" type="number" id="nota3">
+    </p>
+    <p>
+        <input class="env" type="submit" value="Enviar" id="enviar">
+    </p>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() { /*Espera a que todo el contenido del documento se haya cargado antes de ejecutar la función*/
+            function validar(){
+            let nombres = document.getElementById("nombres").value;
+            let apellidos = document.getElementById("apellidos").value;
+            let mensaje = document.getElementById("mensaje").value;
+            let n1=Number(nota1.value);
+            let n2=Number(nota2.value);
+            let n3=Number(nota3.value);
+            if(nombres == "" || apellidos == "" || mensaje == ""){
+                alert("Por favor, complete todos los campos.");
+                return;
+            }
+            if(nota1.value==""|| nota2.value=="" || nota3.value==""){
+                alert("Porfavor ingrese un digito en la nota");
+                return;
+            if(n1<0 || n1>5 || n2<0 || n2>5 || n3<0 || n3>5){
+                alert("Ingresa la nota de nuevo, debe ser entre 1 y 5");
+                return;
+            }
+            function sumar(){
+                let resultado = (n1 + n2 + n3) / 3;
+            }
+            function enviar(){
+                if(env == true){
+                    alert(nombres + " " + apellidos + " el promedio es: " + resultado);
+                }
+            }
+        }}}); 
+    </script>
+
 </body>
 </html>
