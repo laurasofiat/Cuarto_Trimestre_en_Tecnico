@@ -1,0 +1,39 @@
+
+body{
+    background-color: rgb(255, 234, 234);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centra vertical */
+    align-items: center;      /* centra horizontal */
+    text-align: center;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+h3{
+    margin-bottom: 20px;
+}
+
+#img{
+    width: 600px;   
+}
+
+.botones{
+    display:flex;
+    position:center;
+    border-radius: 60px;
+}
+
+button{
+    margin:20px;
+}
+
+#botonTravieso {
+    position: absolute;  /* Muy importante para poder moverlo */
+    top: 100px;
+    left: 100px;
+}
