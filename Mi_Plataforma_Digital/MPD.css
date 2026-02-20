@@ -1,0 +1,28 @@
+body{
+    background-image: url('im1.jpg');
+    background-repeat: no repeat;
+    background-size:cover;
+}
+
+h1{
+    color: rgb(90, 51, 208);
+    text-align: center;
+    margin:none;
+    font-family: "Lucida Sans";
+}
+
+p{
+    color: rgb(103, 50, 228);
+    text-align:center;
+    font-size: 20px;
+    margin:none;
+    font-family:"Lucida Sans";
+}
+
+.img{
+    background-image: url('im2.jpg');
+    background-repeat: no repeat;
+    background-size:cover;
+    height: 400px;
+    width: 400px;
+}
