@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Pantera Rosa</title>
+  <link rel="stylesheet" href="MPD.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <h1>La Pantera Rosa</h1>
+    <nav>
+      <a href="MPD.html">Inicio</a>
+      <a href="PERS.html">Personajes</a>
+      <a href="CURI.html">Curiosidades</a>
+    </nav>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <h2>¡Bienvenidos a las Aventuras en un Mundo Rosa!</h2>
+    <p>Diversión, elegancia y muchas travesuras.</p>
+    <button id="Cambia">Cambiar Fondo</button>
+    <button id="Sorpresa">Ver Sorpresa</button>
+  </section>
+
+  <!-- Tarjetas -->
+  <section class="cards">
+    <div class="card">
+      <h3>La Pantera Detective</h3>
+      <p>Siempre elegante.</p>
+      <p>Resuelve misterios sin decir una palabra.</p>
+      <p>Usa su inteligencia para salir de problemas.</p>
+    </div>
+
+    <div class="card">
+      <h3>La Gran Travesura</h3>
+      <p>Engaña a sus rivales con astucia.</p>
+      <p>Situaciones cómicas inesperadas.</p>
+      <p>Final divertido.</p>
+    </div>
+
+    <div class="card">
+      <h3>El Artista Rosa</h3>
+      <p>Se mete en líos creativos.</p>
+      <p>Usa pintura o disfraces.</p>
+      <p>Humor visual.</p>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span id="cerrar">&times;</span>
+      <h2>¡Sorpresa Rosa!</h2>
+      <p>La elegancia nunca pasa de moda. No se te olvide 🧠</p>
+    </div>
+  </div>
+
+  <footer>
+    <p> Mi Plataforma Digital.</p>
+  </footer>
+
+  <script>
+    const btnColor = document.getElementById("Cambia"); // Botón para cambiar el fondo
+    const btnModal = document.getElementById("Sorpresa"); // Botón para abrir el modal
+    const modal = document.getElementById("modal"); // Modal
+    const cerrar = document.getElementById("cerrar"); // Botón para cerrar el modal
+
+    let rosa = true; // Variable para alternar entre el fondo rosa y la imagen de fondo
+
+    btnColor.addEventListener("click", function() { // Evento para cambiar el fondo
+    if (rosa) { // Si rosa es true, cambia el fondo a rosa
+    document.body.style.backgroundColor = "#ffe4f2"; // Cambia el fondo a rosa
+    } else { // Si rosa es false, cambia el fondo a la imagen de fondo
+        document.body.style.backgroundImage = "url('im3.jpg')"; // Cambia el fondo a la imagen de fondo
+        document.body.style.backgroundSize = "cover"; // Ajusta el tamaño de la imagen para cubrir toda la pantalla
+        document.body.style.backgroundPosition = "center"; // Centra la imagen de fondo
+        document.body.style.backgroundRepeat = "no-repeat";// Evita que la imagen de fondo se repita
+    } 
+    rosa = !rosa; // Alterna el valor de rosa para la próxima vez que se haga clic
+    }); 
+
+    btnModal.addEventListener("click", function() { // Evento para abrir el modal
+    modal.style.display = "flex"; // Cambia el estilo de display del modal a "flex" para mostrarlo
+    });
+
+    cerrar.addEventListener("click", function() { // Evento para cerrar el modal
+    modal.style.display = "none"; // Cambia el estilo de display del modal a "none" para ocultarlo
+    });
+  </script>
+</body>
+</html>

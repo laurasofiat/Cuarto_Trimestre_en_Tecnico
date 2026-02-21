@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <h1>Día de la Mujer</h1>
-    <p> 8 De Marzo </p>
-    <link rel="stylesheet" href="MPD.css">
+  <meta charset="UTF-8">
+  <title>Mi Pantera Rosa</title>
+  <link rel="stylesheet" href="MPD.css">
 </head>
 <body>
-    <header>
 
-    </header>
+  <!-- Barra de navegación -->
+  <header>
+    <h1>La Pantera Rosa</h1>
+    <nav>
+      <a href="AVEN.html">Aventuras</a>
+      <a href="PERS.html">Personajes</a>
+      <a href="CURI.html">Curiosidades</a>
+    </nav>
+  </header>
 
-    <div class="img" id="img">
+  <!-- Sección Hero -->
+  <section class="hero">
+    <h2>¡Bienvenidos al Mundo Rosa!</h2>
+    <p>Diversión, elegancia y muchas travesuras.</p>
+    <button id="Cambia">Cambiar Fondo</button>
+    <button id="Sorpresa">Ver Sorpresa</button>
+  </section>
+
+  <!-- Tarjetas -->
+  <section class="cards">
+    <div class="card">
+      <h3>Aventuras</h3>
+      <p>Descubre sus misiones más divertidas.</p>
     </div>
-    
-    
 
+    <div class="card">
+      <h3>Personajes</h3>
+      <p>Conoce a sus amigos y rivales.</p>
+    </div>
 
-    <footer>
+    <div class="card">
+      <h3>Curiosidades</h3>
+      <p>Datos interesantes del universo rosa.</p>
+    </div>
+  </section>
 
-    </footer>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span id="cerrar">&times;</span>
+      <h2>¡Sorpresa Rosa!</h2>
+      <p>La elegancia nunca pasa de moda. No se te olvide 🧠</p>
+    </div>
+  </div>
 
-    <script scr="MPD.js" ></script>
+  <footer>
+    <p> Mi Plataforma Digital.</p>
+  </footer>
 
+  <script src="MPD.js"></script>
 </body>
 </html>

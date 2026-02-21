@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Pantera Rosa</title>
+  <link rel="stylesheet" href="MPD.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <h1>La Pantera Rosa</h1>
+    <nav>
+      <a href="MPD.html">Inicio</a>
+      <a href="AVEN.html">Aventuras</a>
+      <a href="PERS.html">Personajes</a>
+    </nav>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <h2>¡Curiosidades Divertidas del Mundo Rosa!</h2>
+    <button id="Cambia">Cambiar Fondo</button>
+  </section>
+
+  <!-- Tarjetas -->
+    <section class="cards">
+
+    <div class="card">
+        <h3>No habla casi nunca</h3>
+        <p>La Pantera Rosa es famosa por su humor silencioso.</p>
+    </div>
+
+    <div class="card">
+        <h3>Nació en el cine</h3>
+        <p>El personaje apareció por primera vez en la película "The Pink Panther".</p>
+    </div>
+
+    <div class="card">
+        <h3>Tuvo su propio show</h3>
+        <p>Después del éxito en el cine, protagonizó The Pink Panther Show.</p>
+    </div>
+
+    <div class="card">
+        <h3>Elegancia Natural</h3>
+        <p>Siempre mantiene la calma y actúa con estilo.</p>
+    </div>
+
+    <div class="card">
+        <h3>Un Color Inconfundible</h3>
+        <p>Su tono rosa brillante la hace única.</p>
+    </div>
+
+    <div class="card">
+        <h3>Humor Sin Palabras</h3>
+        <p>Gran parte de su comedia se basa en gestos y situaciones visuales.</p>
+    </div>
+
+    </section>
+
+  <footer>
+    <p> Mi Plataforma Digital.</p>
+  </footer>
+
+  <script >
+    const btnColor = document.getElementById("Cambia"); // Botón para cambiar el fondo
+    const btnModal = document.getElementById("Sorpresa"); // Botón para abrir el modal
+    const modal = document.getElementById("modal"); // Modal
+    const cerrar = document.getElementById("cerrar"); // Botón para cerrar el modal
+
+    let rosa = true; // Variable para alternar entre el fondo rosa y la imagen de fondo
+
+    btnColor.addEventListener("click", function() { // Evento para cambiar el fondo
+    if (rosa) { // Si rosa es true, cambia el fondo a rosa
+        document.body.style.backgroundColor = "#ffe4f2"; // Cambia el fondo a rosa
+    } else { // Si rosa es false, cambia el fondo a la imagen de fondo
+        document.body.style.backgroundImage = "url('im4.jpg')"; // Cambia el fondo a la imagen de fondo
+        document.body.style.backgroundSize = "cover"; // Ajusta el tamaño de la imagen para cubrir toda la pantalla
+        document.body.style.backgroundPosition = "center"; // Centra la imagen de fondo
+        document.body.style.backgroundRepeat = "no-repeat";// Evita que la imagen de fondo se repita
+    } 
+    rosa = !rosa; // Alterna el valor de rosa para la próxima vez que se haga clic
+    }); 
+
+    btnModal.addEventListener("click", function() { // Evento para abrir el modal
+    modal.style.display = "flex"; // Cambia el estilo de display del modal a "flex" para mostrarlo
+    });
+
+    cerrar.addEventListener("click", function() { // Evento para cerrar el modal
+    modal.style.display = "none"; // Cambia el estilo de display del modal a "none" para ocultarlo
+    });
+  </script>
+</body>
+</html>
