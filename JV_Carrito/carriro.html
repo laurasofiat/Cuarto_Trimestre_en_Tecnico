@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>¡Carrito de Compras 🛒!</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+<section class="menú">
+    <h1>¡Bienvenido a la Tienda Virtual!</h1>
+    <p>Productos electrónicos!</p>
+</section>
+<section class="productos">
+    <div class="card">
+        <h3>Laptop</h3>
+        <img src="laptop.jpg" alt="Laptop">
+        <p>$2500</p>
+        <button onclick="agregarProducto('Laptop', 2500)">Agregar</button>
+    </div>
+
+    <div class="card">
+        <h3>Mouse Gamer</h3>
+        <img src="mouse.jpg" alt="Mouse Gamer">
+        <p>$120</p>
+        <button onclick="agregarProducto('Mouse Gamer', 120)">Agregar</button>
+    </div>
+
+    <div class="card">
+        <h3>Teclado Mecánico</h3>
+        <img src="teclado.jpg" alt="Teclado Mecánico">
+        <p>$300</p>
+        <button onclick="agregarProducto('Teclado Mecánico', 300)">Agregar</button>
+    </div>
+
+    <div class="card">
+        <h3>Audífonos Bluetooth</h3>
+        <img src="audifonos.jpg" alt="Audífonos Bluetooth">
+        <p>$250</p>
+        <button onclick="agregarProducto('Audífonos Bluetooth', 250)">Agregar</button>
+    </div>
+</section>
+
+<h2>Mi Carrito</h2>
+<ul id="listaCarrito"></ul>
+<p>Total: $<span id="total">0</span></p>
+
+
+<script src="carrito.js"></script>
+</body>
+</html>
